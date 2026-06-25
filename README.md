@@ -1,61 +1,223 @@
-# Student Mental Health Analysis
+#  Student Mental Health Analysis
 
-## Project Overview
+A data analytics project that explores the relationship between student mental health, sleep patterns, stress levels, and academic performance using MySQL and Power BI.
 
-This project analyzes student mental health data using MySQL and Data Analytics techniques. The goal is to identify patterns between stress, anxiety, depression, sleep habits, academic performance, and social support.
+---
 
-## Objectives
+##  Project Overview
 
-* Analyze student stress levels
-* Identify high-risk students
-* Study the relationship between sleep and stress
-* Explore the impact of mental health on CGPA
-* Generate actionable insights using SQL queries
+Student mental health has a significant impact on academic success. This project analyzes student data to identify trends and relationships between:
 
-## Dataset Information
-
-The dataset contains 100 student records with the following attributes:
-
-* Student ID
-* Age
-* Gender
-* Course
-* Year of Study
-* CGPA
-* Stress Level
-* Anxiety Level
-* Depression Level
+* Stress Levels
+* Anxiety Levels
+* Depression Levels
 * Sleep Hours
-* Social Support
+* CGPA (Academic Performance)
+* Gender Distribution
+* Course-wise Mental Health Trends
 
-## Tools Used
+The project combines SQL-based data analysis with Power BI visualizations to generate meaningful insights.
 
-* MySQL Workbench
-* GitHub
-* Excel / Power BI
+---
 
-## SQL Analysis Performed
+##  Objectives
 
-* Gender Distribution Analysis
-* Average CGPA Analysis
-* Course-wise Stress Analysis
-* Sleep vs Stress Analysis
-* CGPA vs Stress Analysis
+* Analyze student mental health data using SQL.
+* Understand the relationship between sleep and stress.
+* Examine how stress affects CGPA.
+* Compare stress levels across different courses.
+* Build an interactive Power BI dashboard.
 
-## Project Structure
+---
 
-* data/
-* sql/
-* dashboard/
-* screenshots/
-* report/
+##  Tools & Technologies
 
-## Future Enhancements
+| Tool        | Purpose                   |
+| ----------- | ------------------------- |
+| MySQL       | Data Storage & Analysis   |
+| Power BI    | Dashboard & Visualization |
+| GitHub      | Project Hosting           |
+| CSV Dataset | Source Data               |
 
-* Interactive Power BI Dashboard
-* Predictive Mental Health Analytics
-* Machine Learning Based Risk Prediction
+---
+
+## 📂 Project Structure
+
+student-mental-health-analysis/
+│
+├── data/
+│   └── student_mental_health_100_records_clean.csv
+│
+├── sql/
+│   ├── create_tables.sql
+│   └── analysis_queries.sql
+│
+├── dashboard/
+│   └── Mental_Health_Dashboard.pbix
+│
+├── screenshots/
+│   └── dashboard_overview.png
+│
+├── report/
+│   └── Student_Mental_Health_Analysis_Report.md
+│
+└── README.md
+
+
+## Dataset Description
+
+The dataset contains information about 100 students.
+
+### Features
+
+| Column           | Description             |
+| ---------------- | ----------------------- |
+| student_id       | Unique Student ID       |
+| gender           | Male/Female             |
+| course           | Student Course          |
+| cgpa             | Academic Performance    |
+| stress_level     | Stress Score (1–10)     |
+| anxiety_level    | Anxiety Score (1–10)    |
+| depression_level | Depression Score (1–10) |
+| sleep_hours      | Daily Sleep Hours       |
+
+
+##  Database Schema
+
+### Table Creation
+
+```sql
+CREATE TABLE student_mental_health (
+    student_id INT PRIMARY KEY,
+    gender VARCHAR(10),
+    course VARCHAR(50),
+    cgpa DECIMAL(3,2),
+    stress_level INT,
+    anxiety_level INT,
+    depression_level INT,
+    sleep_hours DECIMAL(3,1)
+);
+```
+
+---
+
+##  SQL Analysis
+
+### 1. Gender Distribution
+
+```sql
+SELECT gender, COUNT(*) AS total_students
+FROM student_mental_health
+GROUP BY gender;
+```
+
+### 2. Average CGPA
+
+```sql
+SELECT ROUND(AVG(cgpa),2) AS avg_cgpa
+FROM student_mental_health;
+```
+
+### 3. Course-wise Stress Analysis
+
+```sql
+SELECT course,
+ROUND(AVG(stress_level),2) AS avg_stress
+FROM student_mental_health
+GROUP BY course;
+```
+
+### 4. Sleep vs Stress Analysis
+
+```sql
+SELECT
+CASE
+WHEN sleep_hours < 6 THEN 'Low Sleep'
+ELSE 'Normal Sleep'
+END AS sleep_category,
+ROUND(AVG(stress_level),2) AS avg_stress
+FROM student_mental_health
+GROUP BY sleep_category;
+```
+
+### 5. CGPA vs Stress Analysis
+
+```sql
+SELECT
+stress_level,
+ROUND(AVG(cgpa),2) AS avg_cgpa
+FROM student_mental_health
+GROUP BY stress_level
+ORDER BY stress_level;
+```
+
+---
+
+##  Power BI Dashboard
+
+### Dashboard Preview
+
+
+
+```markdown
+![Student Mental Health Dashboard](screenshots/dashboard_overview.png)
+
+```
+
+### Dashboard Components
+
+* Total Students Card
+* Average CGPA Card
+* Average Stress Card
+* Gender Distribution Pie Chart
+* Average Stress by Course Bar Chart
+* Sleep Hours vs Stress Level Scatter Plot
+* CGPA vs Stress Level Scatter Plot
+
+---
+
+## 💡 Key Insights
+
+### Gender Distribution
+
+* Female Students: 54%
+* Male Students: 46%
+
+### Academic Performance
+
+* Average CGPA: 7.78
+
+### Stress Analysis
+
+* Average Stress Level: 5.90
+* MCA students showed higher average stress levels.
+
+### Sleep & Stress Relationship
+
+* Students with fewer sleep hours generally experienced higher stress levels.
+
+### Stress & Academic Performance
+
+* Higher stress levels were associated with lower CGPA.
+
+---
+
+## Future Improvements
+
+* Collect real-world survey data.
+* Increase dataset size.
+* Build predictive machine learning models.
+* Develop a web-based analytics platform.
+* Integrate real-time student wellbeing monitoring.
+
+---
 
 ## Author
-Mansi Sharma
 
+**Mansi Sharma**
+
+GitHub:
+https://github.com/sharma-mansi711
+
+Project Repository:
+https://github.com/sharma-mansi711/student-mental-health-analysis
