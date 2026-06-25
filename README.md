@@ -41,29 +41,6 @@ The project combines SQL-based data analysis with Power BI visualizations to gen
 
 ---
 
-## 📂 Project Structure
-
-student-mental-health-analysis/
-│
-├── data/
-│   └── student_mental_health_100_records_clean.csv
-│
-├── sql/
-│   ├── create_tables.sql
-│   └── analysis_queries.sql
-│
-├── dashboard/
-│   └── Mental_Health_Dashboard.pbix
-│
-├── screenshots/
-│   └── dashboard_overview.png
-│
-├── report/
-│   └── Student_Mental_Health_Analysis_Report.md
-│
-└── README.md
-
-
 ## Dataset Description
 
 The dataset contains information about 100 students.
