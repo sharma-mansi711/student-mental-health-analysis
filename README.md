@@ -154,10 +154,9 @@ ORDER BY stress_level;
 ---
 
 ##  Power BI Dashboard
+<h2>Dashboard Preview</h2>
 
-### Dashboard Preview
-
-![Student Mental Health Dashboard](screenshots/dashboard_overview.png)
+<img src="screenshots/dashboard_overview.png" alt="Dashboard Preview" width="1000">
 
 
 ### Dashboard Components
