@@ -160,7 +160,7 @@ ORDER BY stress_level;
 
 
 ```markdown
-![Student Mental Health Dashboard](screenshots/dashboard_overview.png)
+[Student Mental Health Dashboard](screenshots/dashboard_overview.png)
 
 ```
 
@@ -168,7 +168,6 @@ ORDER BY stress_level;
 
 * Total Students Card
 * Average CGPA Card
-* Average Stress Card
 * Gender Distribution Pie Chart
 * Average Stress by Course Bar Chart
 * Sleep Hours vs Stress Level Scatter Plot
