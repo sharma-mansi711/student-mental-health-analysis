@@ -181,18 +181,26 @@ ORDER BY stress_level;
 
 * Average CGPA: 7.78
 
+  ![Average CGPA](screenshots/AverageCGPA.png)
+
 ### Stress Analysis
 
 * Average Stress Level: 5.90
 * MCA students showed higher average stress levels.
 
+  ![Course Stress](screenshots/StressAnalysis.png)
+
 ### Sleep & Stress Relationship
 
 * Students with fewer sleep hours generally experienced higher stress levels.
 
+  ![Sleep vs Stress](screenshots/SleepvsStress.png)
+
 ### Stress & Academic Performance
 
 * Higher stress levels were associated with lower CGPA.
+
+  ![CGPA vs Stress](screenshots/CGPAvsStress.png)
 
 ---
 
