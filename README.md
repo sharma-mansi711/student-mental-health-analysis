@@ -40,7 +40,7 @@ The dataset contains 100 student records with the following attributes:
 * Average CGPA Analysis
 * Course-wise Stress Analysis
 * Sleep vs Stress Analysis
-* High Risk Student Identification
+* CGPA vs Stress Analysis
 
 ## Project Structure
 
@@ -57,6 +57,6 @@ The dataset contains 100 student records with the following attributes:
 * Machine Learning Based Risk Prediction
 
 ## Author
-
+Mansi Sharma
 Mansi Sharma
 
