@@ -181,7 +181,7 @@ ORDER BY stress_level;
 
 * Average CGPA: 7.78
 
-  ![Average CGPA](screenshots/AverageCGPA.png)
+  ![Average CGPA](screenshots/Average_cgpa.png)
 
 ### Stress Analysis
 
