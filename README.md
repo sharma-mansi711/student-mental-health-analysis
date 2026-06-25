@@ -175,7 +175,7 @@ ORDER BY stress_level;
 * Female Students: 54%
 * Male Students: 46%
   
-![Gender Distribution](screenshots/gender_distribution.png)
+![Gender Distribution](screenshots/gender.png)
 
 ### Academic Performance
 
