@@ -27,9 +27,10 @@ ROUND(AVG(stress_level),2) AS avg_stress
 FROM student_mental_health
 GROUP BY sleep_category;
 
--- High Risk Students
-SELECT *
+-- CGPA vs Stress 
+SELECT
+    stress_level,
+    ROUND(AVG(cgpa),2) AS avg_cgpa
 FROM student_mental_health
-WHERE stress_level >= 8
-OR anxiety_level >= 8
-OR depression_level >= 8;
+GROUP BY stress_level
+ORDER BY stress_level;
