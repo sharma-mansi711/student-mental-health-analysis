@@ -157,12 +157,8 @@ ORDER BY stress_level;
 
 ### Dashboard Preview
 
+![Student Mental Health Dashboard](screenshots/dashboard_overview.png)
 
-
-```markdown
-[Student Mental Health Dashboard](screenshots/dashboard_overview.png)
-
-```
 
 ### Dashboard Components
 
