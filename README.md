@@ -58,5 +58,4 @@ The dataset contains 100 student records with the following attributes:
 
 ## Author
 Mansi Sharma
-Mansi Sharma
 
